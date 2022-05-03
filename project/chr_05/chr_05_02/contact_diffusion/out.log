@@ -1,0 +1,47 @@
+Namespace(dir='/project2/depablo/walt/michrom/project/chr_05/chr_05_02', scratch='/scratch/midway2/erschultz', odir='/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02', N_min=2000, mode='contact_diffusion', update_mode='eig', jobs=20, sparse_format=False, down_sampling=12, its=4, chunk_size=200, plot=True, scratch_dir='/scratch/midway2/erschultz/contact_diffusion', log_file_path='/scratch/midway2/erschultz/contact_diffusion/out.log', log_file=<_io.TextIOWrapper name='/scratch/midway2/erschultz/contact_diffusion/out.log' mode='a' encoding='UTF-8'>)
+Iteration 0
+gaussian time: 812.673 s
+plot time: 60.697 s
+
+
+Iteration 1
+[0.38449418 0.38278347 0.37796627 ... 0.09684861 0.09075484 0.08673389]
+mean_per_diag time: 538.522 s
+diag time: 1111.964 s
+distance time: 2210.364 s
+w [1.0000002  0.11070091 0.07710254 0.07081993 0.06501409]
+
+order corr:  0.84
+update time: 1209.566 s
+plot time: 117.812 s
+
+
+Iteration 2
+[0.38445874 0.38274786 0.37793063 ... 0.09667157 0.09058831 0.08657444]
+mean_per_diag time: 521.493 s
+diag time: 1089.772 s
+distance time: 2227.817 s
+w [0.99999976 0.42435518 0.3102052  0.2643326  0.25092694]
+
+order corr:  -0.84
+update time: 1202.73 s
+plot time: 118.79 s
+
+
+Iteration 3
+[0.38444733 0.38273655 0.37791963 ... 0.09670618 0.09062142 0.08660658]
+mean_per_diag time: 519.44 s
+diag time: 1080.335 s
+distance time: 2239.312 s
+w [1.0000002  0.8727831  0.78547055 0.7564637  0.7402639 ]
+
+order corr:  0.85
+update time: 1213.246 s
+plot time: 117.212 s
+
+
+Iteration 4
+[0.38435879 0.38264834 0.37783243 ... 0.09667746 0.09059439 0.08658067]
+mean_per_diag time: 510.31 s
+diag time: 1085.621 s
+distance time: 2194.809 s
