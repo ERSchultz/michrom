@@ -75,6 +75,9 @@ def correlation_analysis(args, xyz = None, x = None):
         print(f'\nIteration {it}')
         it_dir = osp.join(args.odir_mode, f'iteration_{it}')
         sc_contacts_dir = osp.join(it_dir, 'sc_contacts')
+        if not osp.exists(sc_contacts_dir):
+            # check if iteration failed
+            continue
 
         # time
         _, spearman = corr_stats.correlate_contact_ratio(sc_contacts_dir, mode = 'spearman')
@@ -85,7 +88,7 @@ def correlation_analysis(args, xyz = None, x = None):
         v_file = osp.join(it_dir, 'v.npy')
         if osp.exists(v_file):
             v = np.load(v_file)
-            for i in range(1, 2): # eig 0 is trivial
+            for i in range(1, 4): # eig 0 is trivial
                 v_i = v[:, i]
                 pearson, spearman = corr_stats.correlate_contact_ratio(sc_contacts_dir, v_i)
                 print(f'v_{i} vs contact_Ratio: pearson={pearson}, spearman={spearman}',

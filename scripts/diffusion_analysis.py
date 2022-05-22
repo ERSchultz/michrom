@@ -703,6 +703,7 @@ def main():
     else:
         raise Exception(f'Unrecognized mode: {args.mode}')
 
+    args.log_file.close()
     # move files from scratch to odir
     move(args.scratch_dir, args.odir)
 
