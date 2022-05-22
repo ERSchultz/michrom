@@ -1,0 +1,46 @@
+Namespace(dir='/project2/depablo/walt/michrom/project/chr_05/chr_05_02', scratch='/scratch/midway2/erschultz', odir='/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02', N_min=2000, mode='contact_diffusion', update_mode='knn', k=3, jobs=20, sparse_format=False, down_sampling=12, its=4, chunk_size=200, plot=True, odir_mode='/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02/contact_diffusion_kNN3', scratch_dir='/scratch/midway2/erschultz/contact_diffusion_kNN3', log_file_path='/scratch/midway2/erschultz/contact_diffusion_kNN3/out.log', log_file=<_io.TextIOWrapper name='/scratch/midway2/erschultz/contact_diffusion_kNN3/out.log' mode='a' encoding='UTF-8'>)
+Namespace(dir='/project2/depablo/walt/michrom/project/chr_05/chr_05_02', scratch='/scratch/midway2/erschultz', odir='/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02', N_min=2000, mode='contact_diffusion', update_mode='knn', k=3, jobs=20, sparse_format=False, down_sampling=12, its=4, chunk_size=200, plot=True, odir_mode='/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02/contact_diffusion_kNN3', scratch_dir='/scratch/midway2/erschultz/contact_diffusion_kNN3', log_file_path='/scratch/midway2/erschultz/contact_diffusion_kNN3/out.log', log_file=<_io.TextIOWrapper name='/scratch/midway2/erschultz/contact_diffusion_kNN3/out.log' mode='a' encoding='UTF-8'>)
+Loaded xyz with shape (1007, 3620, 3)
+xyz load time: 172.258 s
+found 20 total CPUs, 20 available CPUs, using 20
+sc save time: 456.229 s
+Iteration 0
+starting gif
+Iteration 1
+Using epsilon = 0.1353352832366127
+Using k = 4 for k_means
+starting gif
+starting gif
+Iteration 2
+Using epsilon = 0.0820849986238988
+Using k = 4 for k_means
+starting gif
+starting gif
+Iteration 3
+Using epsilon = 0.0820849986238988
+Using k = 4 for k_means
+starting gif
+starting gif
+Iteration 4
+Using epsilon = 0.00020346836901064417
+max_it: 4
+
+Iteration 1
+
+Iteration 2
+
+Iteration 3
+
+Iteration 4
+Traceback (most recent call last):
+  File "/project2/depablo/erschultz/michrom/scripts/diffusion_analysis.py", line 714, in <module>
+    main()
+  File "/project2/depablo/erschultz/michrom/scripts/diffusion_analysis.py", line 709, in main
+    correlation_analysis(args, xyz, x)
+  File "/project2/depablo/erschultz/michrom/scripts/correlation_analysis.py", line 80, in correlation_analysis
+    _, spearman = corr_stats.correlate_contact_ratio(sc_contacts_dir, mode = 'spearman')
+  File "/project2/depablo/erschultz/michrom/scripts/correlation_analysis.py", line 118, in correlate_contact_ratio
+    vals[i] = contact_ratio(osp.join(dir, f'y_sc_{i}.npy'))
+  File "/project2/depablo/erschultz/michrom/scripts/utils.py", line 27, in contact_ratio
+    assert osp.exists(y_file), f'y_file does not exists: {y_file}'
+AssertionError: y_file does not exists: /project2/depablo/erschultz/michrom/project/chr_05/chr_05_02/contact_diffusion_kNN3/iteration_4/sc_contacts/y_sc_0.npy
