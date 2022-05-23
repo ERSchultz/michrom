@@ -10,11 +10,11 @@
 
 dir="/project2/depablo/walt/michrom/project/chr_05/chr_05_02"
 odir="/project2/depablo/erschultz/michrom/project/chr_05/chr_05_02"
-jobs=10
-downSampling=100
-its=1
+jobs=20
+downSampling=12
+its=4
 scratch='/scratch/midway2/erschultz'
-chunkSize=50
+chunkSize=200
 plot='true'
 k=2
 
