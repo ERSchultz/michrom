@@ -1,0 +1,53 @@
+
+Iteration 0
+Time vs contact_Ratio: spearman=-0.07
+Time vs Rg: spearman=0.66
+Time vs end_to_end_distance: spearman=0.16
+
+Iteration 1
+Time vs contact_Ratio: spearman=0.19
+v_1 vs contact_Ratio: pearson=0.25, spearman=0.22
+v_1 vs Rg: pearson=0.49, spearman=0.45
+v_1 vs end_to_end_distance: pearson=0.14, spearman=0.1
+v_2 vs contact_Ratio: pearson=0.24, spearman=0.24
+v_2 vs Rg: pearson=-0.23, spearman=-0.11
+v_2 vs end_to_end_distance: pearson=-0.05, spearman=-0.05
+v_3 vs contact_Ratio: pearson=-0.03, spearman=-0.05
+v_3 vs Rg: pearson=-0.46, spearman=-0.43
+v_3 vs end_to_end_distance: pearson=0.07, spearman=0.07
+
+Iteration 2
+Time vs contact_Ratio: spearman=0.29
+v_1 vs contact_Ratio: pearson=0.28, spearman=0.21
+v_1 vs Rg: pearson=0.52, spearman=0.52
+v_1 vs end_to_end_distance: pearson=0.14, spearman=0.13
+v_2 vs contact_Ratio: pearson=0.2, spearman=0.24
+v_2 vs Rg: pearson=-0.15, spearman=-0.06
+v_2 vs end_to_end_distance: pearson=-0.06, spearman=-0.05
+v_3 vs contact_Ratio: pearson=-0.02, spearman=0.02
+v_3 vs Rg: pearson=0.45, spearman=0.45
+v_3 vs end_to_end_distance: pearson=-0.04, spearman=-0.03
+
+Iteration 3
+Time vs contact_Ratio: spearman=0.3
+v_1 vs contact_Ratio: pearson=-0.34, spearman=-0.23
+v_1 vs Rg: pearson=-0.51, spearman=-0.49
+v_1 vs end_to_end_distance: pearson=-0.14, spearman=-0.1
+v_2 vs contact_Ratio: pearson=0.17, spearman=0.19
+v_2 vs Rg: pearson=-0.24, spearman=-0.08
+v_2 vs end_to_end_distance: pearson=-0.04, spearman=-0.02
+v_3 vs contact_Ratio: pearson=0.02, spearman=-0.04
+v_3 vs Rg: pearson=-0.43, spearman=-0.42
+v_3 vs end_to_end_distance: pearson=0.05, spearman=0.03
+
+Iteration 4
+Time vs contact_Ratio: spearman=0.31
+v_1 vs contact_Ratio: pearson=0.38, spearman=0.27
+v_1 vs Rg: pearson=0.5, spearman=0.47
+v_1 vs end_to_end_distance: pearson=0.14, spearman=0.11
+v_2 vs contact_Ratio: pearson=0.08, spearman=0.12
+v_2 vs Rg: pearson=0.07, spearman=0.12
+v_2 vs end_to_end_distance: pearson=-0.04, spearman=-0.04
+v_3 vs contact_Ratio: pearson=-0.11, spearman=-0.09
+v_3 vs Rg: pearson=0.51, spearman=0.33
+v_3 vs end_to_end_distance: pearson=-0.02, spearman=-0.04
