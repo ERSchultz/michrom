@@ -12,17 +12,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import psutil
 import scipy.sparse as sp
+from correlation_analysis import correlation_analysis
 from scipy.ndimage import gaussian_filter
 from scipy.sparse.csgraph import laplacian
+from seq2contact import (ArgparserConverter, DiagonalPreprocessing,
+                         pearson_round, plot_matrix,
+                         plot_sc_contact_maps_inner, print_size, print_time,
+                         triu_to_full, xyz_to_contact_grid)
 from sklearn.cluster import KMeans
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import pairwise_distances, silhouette_score
 from sklearn.metrics.pairwise import cosine_distances, euclidean_distances
-from seq2contact import (ArgparserConverter, plot_matrix, plot_sc_contact_maps_inner, DiagonalPreprocessing, pearson_round, print_size,
-                         print_time, triu_to_full, xyz_to_contact_grid)
-from correlation_analysis import correlation_analysis
 from utils import load_helper
-
 
 import dmaps  # https://github.com/ERSchultz/dmaps
 

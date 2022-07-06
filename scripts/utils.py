@@ -1,8 +1,11 @@
-import numpy as np
-from sklearn.cluster import KMeans
-import time
 import os.path as osp
-from seq2contact import triu_to_full, lammps_load, xyz_load, save_sc_contacts
+import sys
+import time
+
+import numpy as np
+from seq2contact import lammps_load, save_sc_contacts, triu_to_full, xyz_load
+from sklearn.cluster import KMeans
+
 
 def load_helper(args, contacts = False):
     xyz_file = osp.join(args.dir, 'data_out/output.xyz')
@@ -54,6 +57,49 @@ def rg(xyz):
 def end_to_end_distance(xyz):
     assert len(xyz.shape) == 2
     return np.linalg.norm(xyz[0] - xyz[-1])
+
+class MomentofInertia():
+    '''
+    Class to calculatate moment of inertia.
+
+    Adapted from https://scipython.com/book/chapter-6-numpy/problems/p65/the-moment-of-inertia-tensor/
+    '''
+    def get_inertia_matrix(xyz):
+        # assume masses are 1
+        assert len(xyz.shape) == 2, f'Incorrect shape: {xyz.shape}'
+        assert xyz.shape[1] == 3, f'Incorrect shape: {xyz.shape}'
+
+        x, y, z = xyz.T
+        Ixx = np.sum(y**2 + z**2)
+        Iyy = np.sum(x**2 + z**2)
+        Izz = np.sum(x**2 + y**2)
+        Ixy = -np.sum(x * y)
+        Iyz = -np.sum(y * z)
+        Ixz = -np.sum(x * z)
+        I = np.array([[Ixx, Ixy, Ixz], [Ixy, Iyy, Iyz], [Ixz, Iyz, Izz]])
+        return I
+
+    def get_principal_moi(xyz):
+        I = MomentofInertia.get_inertia_matrix(xyz)
+        Ip = np.linalg.eigvals(I)
+        Ip.sort()
+        return Ip
+
+    def classify_molecule(Ip):
+        # dimensionless Ip
+        A, B, C = 1 / Ip
+        if np.isclose(A, B):
+            if np.isclose(B, C):
+                result = 'Spherical top'
+            else:
+                result = 'Oblate symmetric top'
+        elif np.isclose(B, C):
+            result = 'Prolate symmetric top'
+        else:
+            result =  'Asymmetric top'
+
+        print('{}: A={:.4f}, B={:.4f}, C={:.4f} cm-1'.format(result, A, B, C))
+        return result
 
 def test():
     dir = '/home/erschultz/dataset_test3/samples/sample1'
